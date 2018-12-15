@@ -1,0 +1,260 @@
+{
+	"info": {
+		"_postman_id": "0e91bd18-a9d3-4fcf-aa3a-56375d003c28",
+		"name": "leaf Wearables",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "registerProduct",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"cake\",\r\n    \"price\": 234,\r\n    \"seller\": \"ashi\",\r\n    \"qty\": 12,\r\n    \"desc\": \"fantastic\",\r\n    \"rating\": 5\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/product/registerProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product",
+						"registerProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateProduct",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"productId\": \"5c1295d15df99b32504dbb8b\",\n\t\"updates\": {\n\t\t\"Quantity\":100,\n\t\t\"Desc\": \"bekar\",\n\t\t\"qty\": 1\n\t}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/product/updateProductDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product",
+						"updateProductDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\"productId\": \"5c129604ba0af9031c7fcbd6\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/product/deleteProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product",
+						"deleteProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "orderRequest",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\r\n\t\"productId\": \"5c1295d15df99b32504dbb8b\",\r\n        \"qty\": 4,\r\n        \"deliveryAddress\": \"Delhi\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/order/placeorder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order",
+						"placeorder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register delivery boy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Ram\",\n        \"password\": \"ram\",\n        \"location\": \"Delhi\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/delivery/registerdeliveryboy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"delivery",
+						"registerdeliveryboy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"Ashishgu\",\n    \"adminKey\": \"1234567\",\n    \"password\": \"qwerty\",\n    \"mobile\": \"9876778987\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteOrder",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/order/deleteorder/5c14e742002e772670bf0be6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order",
+						"deleteorder",
+						"5c14e742002e772670bf0be6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userDetails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/userDetails/Ashish",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"userDetails",
+						"Ashish"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get order details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
