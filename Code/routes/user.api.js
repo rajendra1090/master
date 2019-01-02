@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.post('/register', (req, res) => {
     // add a key to register any user as admin
-    // adminKey
+    // adminKey to be decided
     const user = {
     UserName: req.body.username,
     admin: (req.body.adminKey && req.body.adminKey === adminKey) ? true: false,
