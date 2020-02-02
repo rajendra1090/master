@@ -12,3 +12,5 @@ app.use('/product', product.router);
 app.use('/user', user.router);
 
 module.exports = app;
+
+/* Testing JS. */
